@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Este layout NO forma parte de la pantalla hasta que alguien lo
+    "infla" explícitamente desde código (ver ProductDetailActivity).
+    Es el contenido que reemplaza al <ViewStub> cuando el usuario es
+    Administrador.
+
+    NOTA v3 (US08 - "énfasis destructivo"): btnDelete usa un fondo ROJO
+    sólido (bg_delete_button), distinto del morado de btnEdit, para que
+    sea visualmente obvio que es una acción irreversible.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_admin_action_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/btn_edit"
+        android:textAllCaps="false"
+        android:textColor="@color/background_primary"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_delete_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/btn_delete"
+        android:textAllCaps="false"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold" />
+
+</LinearLayout>

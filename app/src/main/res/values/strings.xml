@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FakeStore</string>
+
+    <string name="error_invalid_credentials">Usuario o contraseña inválidos</string>
+    <string name="error_generic">Ocurrió un error. Intenta de nuevo.</string>
+
+    <!-- Login rediseñado -->
+    <string name="login_welcome_subtitle">Bienvenido de nuevo</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">INICIAR SESIÓN</string>
+
+    <string name="dialog_no_connection_title">Sin conexión</string>
+    <string name="dialog_no_connection_message">No se detectó conexión a internet. Verifica tu red e intenta nuevamente.</string>
+    <string name="dialog_accept">Aceptar</string>
+
+    <!-- Catálogo (US03/US04) -->
+    <string name="catalog_title">Catálogo</string>
+    <string name="filter_all">Ver todos</string>
+    <string name="catalog_error_message">No se pudo cargar el catálogo. Verifica tu conexión.</string>
+    <string name="retry">Reintentar</string>
+
+    <!-- Detalle de producto (US05) -->
+    <string name="product_unavailable_title">Producto no disponible</string>
+    <string name="product_unavailable_message">Este producto no existe o no se pudo cargar. Volverás al catálogo.</string>
+    <string name="btn_edit">Editar</string>
+    <string name="btn_delete">Eliminar</string>
+
+    <!-- Formulario de producto (US06/US07): crear y editar comparten pantalla -->
+    <string name="form_title_create">Nuevo Producto</string>
+    <string name="form_title_edit">Editar Producto</string>
+    <string name="hint_title">Título</string>
+    <string name="hint_price">Precio</string>
+    <string name="hint_description">Descripción</string>
+    <string name="hint_image_url">URL de Imagen</string>
+    <string name="hint_category">Categoría</string>
+    <string name="btn_save">Guardar</string>
+    <string name="error_field_required">Este campo es obligatorio</string>
+    <string name="error_price_invalid">Ingresa un precio numérico válido</string>
+
+    <!-- US06: alta exitosa -->
+    <string name="dialog_product_created_title">Producto creado</string>
+    <string name="dialog_product_created_message">Se creó con ID #%1$d.\n(Simulación de la API: no queda guardado en el catálogo general)</string>
+
+    <!-- US07: edición exitosa -->
+    <string name="toast_product_updated">Producto actualizado (Simulación)</string>
+
+    <!-- US08: eliminar producto -->
+    <string name="dialog_delete_title">Eliminar producto</string>
+    <string name="dialog_delete_message">¿Estás seguro de eliminar este producto?</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="toast_product_deleted">Producto eliminado (Simulación)</string>
+
+    <!-- Seguridad: acceso bloqueado por rol -->
+    <string name="access_denied_message">No tienes permisos para acceder a esta pantalla</string>
+
+    <string name="content_desc_add_product">Agregar producto</string>
+</resources>

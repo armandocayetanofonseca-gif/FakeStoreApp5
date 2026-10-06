@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Regresar"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" />
+        </RelativeLayout>
+
+        <!-- Estado de carga mientras se pide /products/{id} -->
+        <ProgressBar
+            android:id="@+id/progressLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:indeterminateTint="@color/admin_action_accent" />
+
+        <!-- Contenido real del detalle; se muestra cuando llega la respuesta -->
+        <LinearLayout
+            android:id="@+id/contentDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivDetailImage"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/bg_image_placeholder"
+                android:contentDescription="@null"
+                android:padding="16dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvDetailCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/role_client_accent"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <!--
+                REGLA DE SEGURIDAD VISUAL (US05):
+                Este ViewStub es un "marcador de espacio" casi vacío:
+                mientras nadie lo infle desde código, los botones de
+                Editar/Eliminar NO EXISTEN de verdad en la jerarquía de
+                vistas (no es lo mismo que ponerles visibility="gone" a
+                unos botones que sí fueron creados). Solo se convierte
+                en los botones reales si ProductDetailActivity decide
+                inflarlo, y eso solo pasa si el rol (leído LOCALMENTE de
+                SessionManager) es ADMIN.
+            -->
+            <ViewStub
+                android:id="@+id/stubAdminActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/stub_admin_actions" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

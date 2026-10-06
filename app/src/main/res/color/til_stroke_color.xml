@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    NOTA: esto NO es un color fijo, es una lista de "reglas": Android
+    revisa el ESTADO de la vista (¿está enfocada? ¿no?) y elige el color
+    que corresponda automáticamente. Así el borde del campo "Usuario" se
+    pinta morado solo mientras el usuario está escribiendo ahí, sin que
+    tengamos que programar nada en Java — es una animación gratis que
+    ya trae Material Components.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/brand_accent" android:state_focused="true" />
+    <item android:color="@color/divider" />
+</selector>

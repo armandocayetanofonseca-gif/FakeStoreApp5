@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Igual que stub_admin_actions.xml en el detalle: este botón NO existe
+    en la jerarquía de vistas hasta que CatalogActivity decide inflarlo,
+    y eso solo pasa si el rol (leído LOCALMENTE de SessionManager) es
+    ADMIN. Para Cliente/Auditor, este FAB simplemente nunca se crea.
+-->
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fabAddProduct"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="20dp"
+    android:contentDescription="@string/content_desc_add_product"
+    android:src="@android:drawable/ic_input_add"
+    app:backgroundTint="@color/brand_accent"
+    app:tint="@color/background_primary" />

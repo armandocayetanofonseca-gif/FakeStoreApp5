@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.FakeStore">
+
+        <activity
+            android:name="com.fakestore.app.ui.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.fakestore.app.ui.ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.fakestore.app.ui.CatalogActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.fakestore.app.ui.ProductDetailActivity"
+            android:exported="false" />
+
+        <!--
+            US06/US07: android:exported="false" evita que OTRAS apps
+            puedan abrir esta pantalla desde afuera. Pero eso no basta
+            para cumplir el spec ("bloquear... vía deeplinks"): dentro
+            de la propia app (o con herramientas como adb), la pantalla
+            SÍ podría forzarse a abrir. Por eso la revisión real de
+            seguridad está en el código (ProductFormActivity.onCreate),
+            no solo en este archivo de configuración.
+        -->
+        <activity
+            android:name="com.fakestore.app.ui.ProductFormActivity"
+            android:exported="false" />
+
+    </application>
+</manifest>
